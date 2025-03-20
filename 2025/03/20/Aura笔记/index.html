@@ -1,0 +1,219 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>欢迎来到Error的博客 | 欢迎来到Error的博客</title><meta name="author" content="Error"><meta name="copyright" content="Error"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Input操作：在Character同级目录创建文件夹Input，内部添加InputAction文件夹，添加一个输入操作，命名为IA_Move,选择2d 在InputAction同级目录添加一个输入情境，命名为IMC_AuraContext,映射IA_Move，添加4个WASD，UE主界面是左手坐标系(上x右y)，输入系统是右手坐标系(右x上y),默认是直接向x(右边)，所以D不用配置，W用拌合输">
+<meta property="og:type" content="article">
+<meta property="og:title" content="欢迎来到Error的博客">
+<meta property="og:url" content="https://github.com/2025/03/20/Aura%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="欢迎来到Error的博客">
+<meta property="og:description" content="Input操作：在Character同级目录创建文件夹Input，内部添加InputAction文件夹，添加一个输入操作，命名为IA_Move,选择2d 在InputAction同级目录添加一个输入情境，命名为IMC_AuraContext,映射IA_Move，添加4个WASD，UE主界面是左手坐标系(上x右y)，输入系统是右手坐标系(右x上y),默认是直接向x(右边)，所以D不用配置，W用拌合输">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/img/%E7%81%B0%E5%A4%AA%E7%8B%BC.png">
+<meta property="article:published_time" content="2025-03-20T09:07:44.223Z">
+<meta property="article:modified_time" content="2025-03-20T09:06:29.877Z">
+<meta property="article:author" content="Error">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/img/%E7%81%B0%E5%A4%AA%E7%8B%BC.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "",
+  "url": "https://github.com/2025/03/20/Aura%E7%AC%94%E8%AE%B0/",
+  "image": "https://github.com/img/%E7%81%B0%E5%A4%AA%E7%8B%BC.png",
+  "datePublished": "2025-03-20T09:07:44.223Z",
+  "dateModified": "2025-03-20T09:06:29.877Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Error",
+      "url": "https://github.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://github.com/2025/03/20/Aura%E7%AC%94%E8%AE%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '欢迎来到Error的博客',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">欢迎来到Error的博客</span></a><a class="nav-page-title" href="/"><span class="site-name">欢迎来到Error的博客</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">无标题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-20T09:07:44.223Z" title="发表于 2025-03-20 17:07:44">2025-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-20T09:06:29.877Z" title="更新于 2025-03-20 17:06:29">2025-03-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img gist" style="background-image: url(/null)"></div><article class="post-content" id="article-container"><h3 id="Input操作："><a href="#Input操作：" class="headerlink" title="Input操作："></a>Input操作：</h3><p>在Character同级目录创建文件夹Input，内部添加InputAction文件夹，添加一个输入操作，命名为IA_Move,选择2d</p>
+<p>在InputAction同级目录添加一个输入情境，命名为IMC_AuraContext,映射IA_Move，添加4个WASD，UE主界面是左手坐标系(上x右y)，输入系统是右手坐标系(右x上y),默认是直接向x(右边)，所以D不用配置，W用拌合输入轴值，交换X，Y轴，因为默认向x,交换后按下就是默认向y。</p>
+<h3 id="PlayerController操作："><a href="#PlayerController操作：" class="headerlink" title="PlayerController操作："></a>PlayerController操作：</h3><p>bReplicates网络复制 &#x3D; true;</p>
+<p>UWorld表示一个大的地图或沙盒的顶级对象，Actor和Components在其中存在，网络模式ENetMode是UWorld的一个属性</p>
+<p>游戏是否可玩？现在的GameInstance是否有LocalPlayer,是否正在处理该玩家的输入并将世界渲染到视口中？</p>
+<p>我们是服务器吗？我们的GameInstance是否具有World的规范副本，其中包含GameMode</p>
+<p>服务器是否对远程连接尝试开放：其他玩家可以加入并作为客户端游玩吗？</p>
+<p>可玩并且是服务器，但不允许别人来玩：NM_Standalone</p>
+<p>是服务器并允许别的来玩：NM_DedicatedServer</p>
+<p>全满足：NM_ListenServer</p>
+<p>只是可玩：NM_Clinet</p>
+<p><strong>UWorld中的NetMode的值就取决于你启动GameInstance的方式，如何打开地图</strong></p>
+<p>UEwasd是2d的坐标系,下面是3d中左手坐标系和右手坐标系定义。</p>
+<p>左手坐标系：右x前z上y </p>
+<p>右手坐标系：左x前z上y</p>
+<h3 id="UI包括HUD-WidgetController-Widget"><a href="#UI包括HUD-WidgetController-Widget" class="headerlink" title="UI包括HUD,WidgetController,Widget"></a>UI包括HUD,WidgetController,Widget</h3><p>HUD包含一个OverlayWidget,InitOverlay创建一个Widget，然后定义一个Params传给GetOverlayWidgetController来创建包含Params的OvarlayWidgetController,接着绑定Widget和WidgetController,绑定成功后这些Params还没赋值要初始化，而Params在OverlayWidgetController中，所以调用WidgetController的重写虚函数BroadcastInitialValues();这个初始化将AttributeSet转换成AuraAttributeSet,使得这个AttributeSet表示Aura的属性，调用AuraAttributeSet的构造函数初始化血量和MP；</p>
+<p>OverlayWidgetController可以通过ASC实现监听Attribute值的变化并回调</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AbilitySystemComponent-&gt;<span class="built_in">GetGameplayAttributeValueChangeDelegate</span>(</span><br><span class="line">       AuraAttributeSet-&gt;<span class="built_in">GetHPAttribute</span>()).<span class="built_in">AddUObject</span>(<span class="keyword">this</span>, &amp;UOverlayWidgetController::HpChanged);</span><br></pre></td></tr></table></figure>
+
+<p>传入一个Attribute值，添加这个函数变化后的回调，这个值变化就调用HpChanged，调用HpChanged时回传入这个Attribute也就是血量，触发OnHpChanged.Broadcast(Data.NewValue)，OnHpChanged是OverlayWidgetController中</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UPROPERTY</span>(BlueprintAssignable, Category=<span class="string">&quot;GAS|Attributes&quot;</span>)</span><br><span class="line">FOnHpChangedSignature OnHpChanged;</span><br></pre></td></tr></table></figure>
+
+<p>这样定义的回调，传到蓝图中，蓝图中需使用BindEventToOnHpChanged处理这个OnHpChanged调用并传来NewHp的时候怎么处理UI；比如这里是修改血条，重新计算比例。</p>
+<p>AuraWidget中，定义一个</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UFUNCTION</span>(BlueprintImplementableEvent)</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WidgetControllerSet</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>这个函数只在蓝图中定义重写，表示，为EventWidgetControllerSet；<strong>当 <code>WidgetController</code> 赋值完成后，自动调用蓝图中的 <code>WidgetControllerSet</code> 事件</strong>，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OverlayWidget-&gt;<span class="built_in">SetWidgetController</span>(WidgetController);<span class="comment">//这里给Widget设置WidgetController时，</span></span><br><span class="line"><span class="comment">//就有一个可以在蓝图上定义的，设置之后会发生什么</span></span><br></pre></td></tr></table></figure>
+
+</article><article class="container post-content" id="article-container"><h3 id="Input操作："><a href="#Input操作：" class="headerlink" title="Input操作："></a>Input操作：</h3><p>在Character同级目录创建文件夹Input，内部添加InputAction文件夹，添加一个输入操作，命名为IA_Move,选择2d</p>
+<p>在InputAction同级目录添加一个输入情境，命名为IMC_AuraContext,映射IA_Move，添加4个WASD，UE主界面是左手坐标系(上x右y)，输入系统是右手坐标系(右x上y),默认是直接向x(右边)，所以D不用配置，W用拌合输入轴值，交换X，Y轴，因为默认向x,交换后按下就是默认向y。</p>
+<h3 id="PlayerController操作："><a href="#PlayerController操作：" class="headerlink" title="PlayerController操作："></a>PlayerController操作：</h3><p>bReplicates网络复制 &#x3D; true;</p>
+<p>UWorld表示一个大的地图或沙盒的顶级对象，Actor和Components在其中存在，网络模式ENetMode是UWorld的一个属性</p>
+<p>游戏是否可玩？现在的GameInstance是否有LocalPlayer,是否正在处理该玩家的输入并将世界渲染到视口中？</p>
+<p>我们是服务器吗？我们的GameInstance是否具有World的规范副本，其中包含GameMode</p>
+<p>服务器是否对远程连接尝试开放：其他玩家可以加入并作为客户端游玩吗？</p>
+<p>可玩并且是服务器，但不允许别人来玩：NM_Standalone</p>
+<p>是服务器并允许别的来玩：NM_DedicatedServer</p>
+<p>全满足：NM_ListenServer</p>
+<p>只是可玩：NM_Clinet</p>
+<p><strong>UWorld中的NetMode的值就取决于你启动GameInstance的方式，如何打开地图</strong></p>
+<p>UEwasd是2d的坐标系,下面是3d中左手坐标系和右手坐标系定义。</p>
+<p>左手坐标系：右x前z上y </p>
+<p>右手坐标系：左x前z上y</p>
+<h3 id="UI包括HUD-WidgetController-Widget"><a href="#UI包括HUD-WidgetController-Widget" class="headerlink" title="UI包括HUD,WidgetController,Widget"></a>UI包括HUD,WidgetController,Widget</h3><p>HUD包含一个OverlayWidget,InitOverlay创建一个Widget，然后定义一个Params传给GetOverlayWidgetController来创建包含Params的OvarlayWidgetController,接着绑定Widget和WidgetController,绑定成功后这些Params还没赋值要初始化，而Params在OverlayWidgetController中，所以调用WidgetController的重写虚函数BroadcastInitialValues();这个初始化将AttributeSet转换成AuraAttributeSet,使得这个AttributeSet表示Aura的属性，调用AuraAttributeSet的构造函数初始化血量和MP；</p>
+<p>OverlayWidgetController可以通过ASC实现监听Attribute值的变化并回调</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AbilitySystemComponent-&gt;<span class="built_in">GetGameplayAttributeValueChangeDelegate</span>(</span><br><span class="line">       AuraAttributeSet-&gt;<span class="built_in">GetHPAttribute</span>()).<span class="built_in">AddUObject</span>(<span class="keyword">this</span>, &amp;UOverlayWidgetController::HpChanged);</span><br></pre></td></tr></table></figure>
+
+<p>传入一个Attribute值，添加这个函数变化后的回调，这个值变化就调用HpChanged，调用HpChanged时回传入这个Attribute也就是血量，触发OnHpChanged.Broadcast(Data.NewValue)，OnHpChanged是OverlayWidgetController中</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UPROPERTY</span>(BlueprintAssignable, Category=<span class="string">&quot;GAS|Attributes&quot;</span>)</span><br><span class="line">FOnHpChangedSignature OnHpChanged;</span><br></pre></td></tr></table></figure>
+
+<p>这样定义的回调，传到蓝图中，蓝图中需使用BindEventToOnHpChanged处理这个OnHpChanged调用并传来NewHp的时候怎么处理UI；比如这里是修改血条，重新计算比例。</p>
+<p>AuraWidget中，定义一个</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UFUNCTION</span>(BlueprintImplementableEvent)</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WidgetControllerSet</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>这个函数只在蓝图中定义重写，表示，为EventWidgetControllerSet；<strong>当 <code>WidgetController</code> 赋值完成后，自动调用蓝图中的 <code>WidgetControllerSet</code> 事件</strong>，</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">OverlayWidget-&gt;<span class="built_in">SetWidgetController</span>(WidgetController);<span class="comment">//这里给Widget设置WidgetController时，</span></span><br><span class="line"><span class="comment">//就有一个可以在蓝图上定义的，设置之后会发生什么</span></span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://github.com">Error</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://github.com/2025/03/20/Aura%E7%AC%94%E8%AE%B0/">https://github.com/2025/03/20/Aura%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://github.com" target="_blank">欢迎来到Error的博客</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/%E7%81%B0%E5%A4%AA%E7%8B%BC.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/%E7%81%B0%E5%A4%AA%E7%8B%BC.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Error</div><div class="author-info-description">1953601435@qq.com</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://github.com/1953601435"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Input%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">1.</span> <span class="toc-text">Input操作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PlayerController%E6%93%8D%E4%BD%9C%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">PlayerController操作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UI%E5%8C%85%E6%8B%ACHUD-WidgetController-Widget"><span class="toc-number">3.</span> <span class="toc-text">UI包括HUD,WidgetController,Widget</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/03/20/Aura%E7%AC%94%E8%AE%B0/" title="无标题">无标题</a><time datetime="2025-03-20T09:07:44.223Z" title="发表于 2025-03-20 17:07:44">2025-03-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Error</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
